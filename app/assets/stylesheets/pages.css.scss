@@ -1,0 +1,29 @@
+@import "compass/css3/border-radius";
+@import "ggs";
+
+article, aside {
+  @include ggs-margin-width;
+}
+
+p {
+  @include ggs-margin-height(1, 1);
+}
+
+@include ggs-8-columns {
+  article, aside {
+    float: left;
+  }
+
+  article {
+    margin-right: 0;
+    @include ggs-width(10);
+  }
+
+  aside {
+    border: 1px solid #555;
+    @include border-radius;
+    margin-left: 0;
+    @include ggs-width(6);
+    @include ggs-margin-height(5, 1);
+  }
+}
